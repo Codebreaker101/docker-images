@@ -6,9 +6,15 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: smbclient/Dockerfile
+      build_args:
+        - SAMBA_CLIENT_VERSION=${SAMBA_CLIENT_VERSION}
       username:
         from_secret: USERNAME
       password:
         from_secret: PASSWORD
       repo: codebreaker1/smbclient
       tags: latest
+
+matrix:
+  SAMBA_CLIENT_VERSION:
+    - 4.10.8-r0
