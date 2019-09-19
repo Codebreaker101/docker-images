@@ -1,6 +1,8 @@
-FROM alpine:3
+ARG ALPINE_VERSION=3
+FROM alpine:$ALPINE_VERSION
 
-RUN apk add --no-cache samba-client=4.10.8-r0 && mkdir /data
+ARG SAMBA_CLIENT_VERSION
+RUN apk add --no-cache samba-client=$SAMBA_CLIENT_VERSION && mkdir /data
 WORKDIR /data
 
 ENTRYPOINT [ "smbclient" ]
