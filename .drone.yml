@@ -13,4 +13,4 @@ steps:
       password:
         from_secret: PASSWORD
       repo: codebreaker1/smbclient
-      tags: latest
+      tags: [latest, 4.10.8]
