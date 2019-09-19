@@ -30,5 +30,5 @@ steps:
         from_secret: USERNAME
       password:
         from_secret: PASSWORD
-      repo: codebreaker1/smbclient
+      repo: codebreaker1/curl
       tags: [latest, 7.66.0]
