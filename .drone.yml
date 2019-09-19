@@ -6,3 +6,5 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: smbclient/Dockerfile
+      repo: codebreaker1/smbclient
+      tags: latest
