@@ -32,3 +32,19 @@ steps:
         from_secret: PASSWORD
       repo: codebreaker1/curl
       tags: [latest, 7.66.0]
+
+---
+kind: pipeline
+name: os-debianconsole
+
+steps:
+  - name: v1.5.4-python3
+    image: plugins/docker
+    settings:
+      dockerfile: os-debianconsole/Dockerfile
+      username:
+        from_secret: USERNAME
+      password:
+        from_secret: PASSWORD
+      repo: codebreaker1/os-debianconsole
+      tags: [v1.5.4-python3]
